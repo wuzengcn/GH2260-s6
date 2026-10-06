@@ -144,7 +144,7 @@ Demand for health care is derived from the demand for health
 
 <center>
 
-<img src="/pic/S6-HI.png" width="80%">
+<img src="./pic/S6-HI.png" width="80%">
 
 </center>
 
@@ -195,7 +195,7 @@ The health stock of individual $j$ at time $t+1$ is given by:
 
 <center>
 
-<img src="/pic/S6-F2.png" width="100%">
+<img src="./pic/S6-F2.png" width="100%">
 
 </center>
 :::
@@ -221,7 +221,7 @@ The health stock of individual $j$ at time $t+1$ is given by:
 
 <center>
 
-<img src = "/pic/S6-SDH.png" width="100%">
+<img src = "./pic/S6-SDH.png" width="100%">
 
 </center>
 
@@ -315,7 +315,7 @@ The health stock of individual $j$ at time $t+1$ is given by:
 
 <center>
 
-<img src="/pic/S6-F3.png" width="60%">
+<img src="./pic/S6-F3.png" width="60%">
 
 </center>
 
@@ -380,7 +380,7 @@ Demand curve rotates [clock wise]{.emcolor}
 :::{.grid-item}
 <center> 
 
-<img src="/pic/S6-F4.png" width="70%">
+<img src="./pic/S6-F4.png" width="70%">
 
 </center>
 
@@ -409,7 +409,7 @@ Demand curve rotates [clock wise]{.emcolor}
 
 <center>
 
-<img src = "/pic/S6-SID.png" width="100%">
+<img src = "./pic/S6-SID.png" width="100%">
 
 </center>
 :::
@@ -421,7 +421,7 @@ Demand curve rotates [clock wise]{.emcolor}
 
 <center> 
 
-<img src="/pic/S6-F5.png" width="60%">
+<img src="./pic/S6-F5.png" width="60%">
 
 </center>
 
