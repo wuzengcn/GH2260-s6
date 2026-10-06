@@ -1,0 +1,529 @@
+---
+format:
+  revealjs:
+    theme: styles1.scss
+    transition: fade
+    slide-number: true
+    wide: true
+    chalkboard: true
+    margin: 0.05
+    footer: "Introduction to Health Economics | Fall 2026 | Session 6"
+    controls: true
+    center: true
+---
+
+::: {.layout ="[90,10]"}
+:::{first-column}
+[Session 6]{.kicker}
+
+<div class="rule"></div>
+
+<p class = "h1">Demand for Health and Medical Care</p>
+
+[Wu Zeng, MD, PhD, Georgetown University]{.label}
+
+:::
+:::{second-column}
+
+<!-- nothing-->
+
+:::
+:::
+
+
+---
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, 
+  comment = NA, dpi = 300, fig.align = "center", out.width = "80%", cache = FALSE)
+library(tidyverse)
+library(DiagrammeR)
+library(widgetframe)
+library(readxl)
+library(kableExtra)
+```
+
+## Outline 
+
+::::{.three-col-grid}
+:::{.grid-item}
+
+<center>
+[1]{.n-circle}
+
+Production of Health
+</center>
+
+- Measures of health status 
+- Determinants of health status 
+:::
+
+:::{.grid-item}
+<center>
+[2]{.n-circle}
+
+Demand for medical care
+</center>
+
+- Uniqueness of medical care
+- Factors influencing demand
+:::
+
+:::{.grid-item}
+
+<center>
+[3]{.n-circle}
+
+Measuring demand for medical care elasticity
+</center>
+:::
+::::
+
+---
+
+## Distinction between Health and Medical Care
+
+
+::::{.two-col-grid}
+
+:::{.grid-item}
+
+What is [health]{.emcolor}?
+
+:::{.fragment}
+
+<center>
+
+> Health is the desired state of complete physical, mental, and social well-being, and not merely the absence of disease or infirmity. 
+
+</center>
+:::
+
+:::
+
+:::{.grid-item}
+
+What is [medical care]{.emcolor}? 
+
+:::{.fragment}
+
+<center>
+
+> Medical care is a reactive service used to diagnose, treat, and manage specific diseases or injuries. 
+
+</center>
+:::
+:::
+::::
+
+---
+
+::::{.slide-list}
+:::{.list-header}
+
+[Derived demand]{.kicker}
+
+<div class="rule"></div>
+
+<p class = "h2">Derived demand for health care</p>
+
+Demand for health care is derived from the demand for health
+:::
+:::{.list-content .bullet-list}
+
+- It is not medical care that consumers want, but rather health
+- Consumers demand medical care inputs to produce it
+- Health can be treated both as a consumption good and an investment good (capital good)
+- As we demand for health, we are interested in what is the most efficient way to produce health
+:::
+::::
+
+--- 
+
+## Production of health 
+
+<center>
+
+<img src="/pic/S6-HI.png" width="80%">
+
+</center>
+
+---
+
+## Health and health investment
+
+Health is a [stock]{.emcolor} and [capital good]{.emcolor} (like [buildings]{.emcolor} and [cars]{.emcolor}): 
+
+- $H_{jt}$: Health stock of individual $j$ at time $t$.
+
+Health investment (e.g., medical care, exercise, nutrition) increases the stock of health: 
+
+  - $I_{jt}$: Health investment of individual $j$ at time $t$.
+
+Health [depreciates]{.emcolor} over time, similar to physical capital: Assuming a depreciation rate at $\delta$
+
+  - $\delta H_{jt}$: The health stock depreciation of individual $j$ at time $t$.
+
+The health stock of individual $j$ at time $t+1$ is given by:
+  - $H_{j,t+1} = H_{jt} + I_{jt} - \delta H_{jt} \rightarrow \Delta H_{jt} = H_{j,t+1} - H_{j,t} = I_{jt} - \delta H_{jt}$
+
+
+---
+
+## What goes in to the health investment function?
+
+- $I_{jt} = f(MC_{jt}, T_{jt}, C_{jt}, A_{jt}, B_{jt})$
+  - $MC_{jt}$: Medical care inputs (e.g., physician visits, hospital stays, prescription drugs)     
+  - $T_{jt}$: [Time]{.emcolor} devoted to the production of health
+  - $C_{jt}$: [Human capital]{.emcolor} (e.g. education, knowledge, skills)
+  - $A_{jt}$: [Age]{.emcolor} 
+  - $B_{jt}$: [Behavioral risk factors]{.emcolor} (e.g., smoking, alcohol consumption, diet, exercise)
+
+---
+
+::::{.slide-list}
+:::{.list-header}
+
+[Health and medical expenditure]{.kicker}
+
+<div class="rule"></div>
+
+<p class = "h2">Relationship between health and medical expenditure</p>
+
+:::
+:::{}
+
+<center>
+
+<img src="/pic/S6-F2.png" width="100%">
+
+</center>
+:::
+::::
+
+---
+
+## Determinant of Health
+
+::::{.two-col-grid}
+:::{.grid-item}
+
+- [Income]{.emcolor} and [education]{.emcolor}
+  - No direct relationship 
+  - But they are linked to access to care
+- [Environment]{.emcolor} and [lifestyle]{.emcolor}
+  - More direct relationship
+  - 65% of all cancer in the United States is associated with lifestyle and environmental factors
+- [Genetic endowment]{.emcolor}
+  - More direct evidence of the relationship between genetic endowment and health status
+:::
+:::{.grid-item}
+
+<center>
+
+<img src = "/pic/S6-SDH.png" width="100%">
+
+</center>
+
+:::
+::::
+
+---
+
+## Measurement of health 
+
+<br>  
+
+> Health as “a state of complete physical, mental, and social well-being and not merely the absence of disease or infirmity.”
+
+::::{.two-col-grid}
+:::{.grid-item}
+- Mortality
+  - Infant mortality
+  - Maternal mortality 
+  - Adult mortality
+  - Life expectancy
+- Morbidity
+  - Incidence
+  - Prevalance
+  - Disability
+
+:::
+::: {.grid-item}
+
+- Combined indicator
+  - QALY: Quality-adjusted life years
+  - DALY: Disability-adjusted life years
+
+:::
+:::
+
+---
+
+## Public health, Nutrition and Health 
+
+::::{.two-col-grid}
+:::{.grid-item}
+
+- Public health and nutrition are important determinants of health status
+  - Vaccine 
+  - Water and sanitation
+- Nutrition is a key determinant of health status
+  - Malnutrition is a major cause of morbidity and mortality in developing countries
+  - Obesity is a major cause of morbidity and mortality in developed countries
+:::
+
+:::{.grid-item}
+
+<center>
+
+<iframe width="600" height="400" src="https://www.youtube.com/embed/t_eWESXTnic" title="What is Public Health??" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</center>
+
+:::
+::::
+
+---
+
+## Demand for medical care
+
+::::{.two-col-grid}
+:::{.grid-item}
+
+- The demand for medical care is a [derived]{.emcolor} demand, resulting from the demand for good health
+
+- Demand for medical care has a [consumption]{.emcolor} component and an [investment]{.emcolor} component
+
+- Demand for medical care and its price are inversely related
+
+:::
+:::{.grid-item}
+
+<center>
+
+<img src = "https://integratedcarejournal.com/wp-content/uploads/2022/05/capita-demand-in-healthcare.png" width="100%">
+
+</center>
+
+:::
+::::
+
+---
+
+## Demand based on need and willingness to pay
+
+<center>
+
+<img src="/pic/S6-F3.png" width="60%">
+
+</center>
+
+
+---
+
+## Determinant of demand for medical care
+
+$M_{jt} = f(H_{jt}, D_{jt}, E_{jt}, P_{t})$
+
+- $M_{jt}$: Medical care demand of individual $j$ at time $t$
+- $H_{jt}$: Health stock of individual $j$ at time $t$
+- $D_{jt}$: Demographic characteristics of individual $j$ at time $t$
+- $E_{jt}$: Economic characteristics of individual $j$ at time $t$
+- $P_{t}$: Physician factors at time $t$
+
+---
+
+## Comprehensive Grossman model of demand for medical care
+
+<center>
+
+<iframe width="900" height="500" src="https://www.youtube.com/embed/z-xUVWRofH8" title="The Grossman Model: A Visual Primer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</center>
+
+
+---
+
+## Economic standing (health insurance)
+
+::::{.two-col-grid}
+:::{.grid-item}
+
+The above demand analysis assumed that the patient pays for care out-of-pocket
+
+:::
+:::{.grid-item}
+
+How does insurance affect the demand for care?
+
+  - Coinsurance: Patient pays only a fixed % of the cost of each visit (often C = .20)
+  - If the visit costs $100 : patient pays $20, insurance pays $80
+:::
+::::
+
+---
+
+## Health insurance
+
+::::{.two-col-grid}
+:::{.grid-item}
+- No insurance: consumer faces price $P_0$,
+makes $Q_0$ visits
+- With coinsurance: consumer faces price
+$P_1$, wants to make $Q_1$ visits
+- Coinsurance leads to a demand of $Q_1$
+visits at price $P_0$, shared by consumer
+and insurance company
+Demand curve rotates [clock wise]{.emcolor}
+:::
+:::{.grid-item}
+<center> 
+
+<img src="/pic/S6-F4.png" width="70%">
+
+</center>
+
+:::
+::::
+
+---
+
+## Physician factors 
+
+[principal-agent relationship]{.kicker}
+
+::::{.two-col-grid}
+:::{.grid-item}
+
+- Principal-agent relationship:
+  - Fundamentally it is a problem of asymmetric information
+    - Physician (agent) has more information than the patient (principal)
+    - Physician can make decisions on behalf of the patient (principal)
+- Consequence of the principal-agent relationship:
+  - Physician can influence the demand for medical care
+  - Physician can induce demand for medical care
+
+:::
+:::{.grid-item}
+
+<center>
+
+<img src = "/pic/S6-SID.png" width="100%">
+
+</center>
+:::
+::::
+
+---
+
+## Supply induced demand
+
+<center> 
+
+<img src="/pic/S6-F5.png" width="60%">
+
+</center>
+
+---
+
+::::{.slide-list}
+:::{.list-header}
+
+[Supply induced demand]{.kicker}
+
+<div class="rule"></div>
+
+<p class = "h2">Is supply induced demand a problem?</p>
+
+:::
+:::{.list-content .bullet-list}
+
+Evidence is mixed 
+
+Potential implications
+
+- Supply induced demand is probably not as widespread as it was once thought to be 
+
+- With the new payment mechnisms, capitation and bundled payments, supply induced demand is likely to be less of a problem
+
+- Patients, payers and lawmakers become more knowledgeable about the medical practices and procedure, SID will be less of a concern 
+
+:::
+::::
+---
+
+## Demand for medical care: elasticity
+
+::: {.columns}
+::: {.column width="35%"}
+:::{.bullet-list}
+Price elasticity: the percentage change in quantity demanded resulting from a 1% change in price
+
+- Most inelastic
+- More elatic for outpatient than hosptial care 
+- More elastic for preventive than hospital care
+:::
+:::
+
+::: {.column width="65%"}
+
+```{r table1}
+read_excel("Elasticity.xlsx", sheet = "Sheet1", range = "A1:C26", col_names = TRUE) %>%
+  kbl(caption = "Elasticity of demand for medical care", booktabs = TRUE) %>%
+  kable_styling(latex_options = c("striped", "hold_position"), font_size = 12)
+
+```
+
+:::
+
+:::
+---
+
+## Income Elaticity 
+
+::: {.columns}
+::: {.column width="35%"}
+:::{.bullet-list}
+Income elasticity: the percentage change in quantity demanded resulting from a 1% change in income
+
+- Vary substantially
+- Mixed: (luxury vs. necessity goods)
+
+Cross-price elasticity: the percentage change in quantity demanded of one good resulting from a 1% change in the price of another good
+:::
+:::
+:::{.column width="65%"}
+
+```{r table1}
+```
+:::
+::::
+
+---
+
+## Policy implications of demand elasticity
+
+::::{.two-col-grid}
+:::{.grid-item}
+<center>
+[1]{.n-circle}
+
+Price elasticity of demand for medical care is generally inelastic, but varies by type of care and patient characteristics
+</center>
+
+:::
+:::{.grid-item}
+<center>
+[2]{.n-circle}
+
+Some medical care is more elastic than others, and some patients are more sensitive to price changes than others
+
+</center>
+
+:::
+::::
+
+---
+
+## Questions and comments?
